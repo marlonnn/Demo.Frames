@@ -153,7 +153,7 @@
     <Content Include="Lib\Interop.DexterLib.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\avifilewrapperdemo_src\aviFileWrapperDemo_src\AviFile\AviFile.csproj">
+    <ProjectReference Include="..\AviFile\AviFile.csproj">
       <Project>{abb32a29-af50-47fa-b243-5fd75a5aba54}</Project>
       <Name>AviFile</Name>
     </ProjectReference>
