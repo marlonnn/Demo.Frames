@@ -13,7 +13,24 @@ namespace Demo.Frames
 {
     public partial class TestForm : Form
     {
+        private Object thisLock = new Object();
+
         private List<Frame> _frames;
+
+        private List<Frame> Frames
+        {
+            get
+            {
+                return this._frames;
+            }
+            set
+            {
+                lock (thisLock)
+                {
+                    _frames = value;
+                }
+            }
+        }
         private int _currentNumber;
         public TestForm()
         {
@@ -30,11 +47,13 @@ namespace Demo.Frames
 
         private void TraceBar_ValueChanged(object sender, EventArgs e)
         {
-            var value = this.trackBar.Value;
-            if (value > 0)
-            {
+            int value = this.trackBar.Value;
+            long tick = DateTime.Now.Ticks;
+            Random ran = new Random((int)(tick & 0xffffffffL) | (int)(tick >> 32));
 
-            }
+            Random random = new Random();
+            this.lblRadam.Text = ran.Next(1, 5).ToString();
+            Frames = GetFrames(this.lblRadam.Text);
         }
 
         private void btnOpen_Click(object sender, EventArgs e)
@@ -77,6 +96,27 @@ namespace Demo.Frames
                 _currentNumber = ++_currentNumber % _frames.Count;
                 picFrame.ImageLocation = _frames[_currentNumber].FileFullName;
             }
+        }
+
+
+        private List<Frame> GetFrames(string index)
+        {
+            List<Frame> frames = new List<Frame>();
+            string folder = System.Environment.CurrentDirectory + "\\Frames" + index;
+            DirectoryInfo dir = new DirectoryInfo(folder);
+            FileInfo[] fileInfo = dir.GetFiles();
+            Array.Sort(fileInfo, delegate (FileInfo x, FileInfo y) 
+            {
+                return Int32.Parse(Path.GetFileNameWithoutExtension(x.Name)).CompareTo
+                (Int32.Parse(Path.GetFileNameWithoutExtension(y.Name)));
+            });
+            foreach (FileInfo info in fileInfo)
+            {
+                var v = Path.GetFileNameWithoutExtension(info.Name);
+                Frame frame = new Frame(info.FullName, folder);
+                frames.Add(frame);
+            }
+            return frames;
         }
     }
 

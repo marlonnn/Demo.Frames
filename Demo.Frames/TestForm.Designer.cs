@@ -39,9 +39,9 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lblFps = new System.Windows.Forms.Label();
             this.trackBar = new System.Windows.Forms.TrackBar();
-            this.lblMax = new System.Windows.Forms.Label();
-            this.lblMin = new System.Windows.Forms.Label();
+            this.lblRadam = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picFrame)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar)).BeginInit();
@@ -138,44 +138,43 @@
             // trackBar
             // 
             this.trackBar.LargeChange = 2;
-            this.trackBar.Location = new System.Drawing.Point(541, 180);
+            this.trackBar.Location = new System.Drawing.Point(567, 131);
             this.trackBar.Maximum = 6;
-            this.trackBar.Minimum = -6;
             this.trackBar.Name = "trackBar";
             this.trackBar.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.trackBar.Size = new System.Drawing.Size(45, 444);
             this.trackBar.TabIndex = 4;
             this.trackBar.ValueChanged += new System.EventHandler(this.TraceBar_ValueChanged);
             // 
-            // lblMax
+            // lblRadam
             // 
-            this.lblMax.AutoSize = true;
-            this.lblMax.Location = new System.Drawing.Point(548, 164);
-            this.lblMax.Name = "lblMax";
-            this.lblMax.Size = new System.Drawing.Size(13, 13);
-            this.lblMax.TabIndex = 5;
-            this.lblMax.Text = "5";
-            // 
-            // lblMin
-            // 
-            this.lblMin.AutoSize = true;
-            this.lblMin.Location = new System.Drawing.Point(548, 632);
-            this.lblMin.Name = "lblMin";
-            this.lblMin.Size = new System.Drawing.Size(13, 13);
-            this.lblMin.TabIndex = 6;
-            this.lblMin.Text = "5";
+            this.lblRadam.AutoSize = true;
+            this.lblRadam.Location = new System.Drawing.Point(570, 106);
+            this.lblRadam.Name = "lblRadam";
+            this.lblRadam.Size = new System.Drawing.Size(13, 13);
+            this.lblRadam.TabIndex = 5;
+            this.lblRadam.Text = "1";
             // 
             // timer
             // 
             this.timer.Tick += new System.EventHandler(this.Frame_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(518, 106);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Random:";
             // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(668, 710);
-            this.Controls.Add(this.lblMin);
-            this.Controls.Add(this.lblMax);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblRadam);
             this.Controls.Add(this.trackBar);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.picFrame);
@@ -203,8 +202,8 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label lblFps;
         private System.Windows.Forms.TrackBar trackBar;
-        private System.Windows.Forms.Label lblMax;
-        private System.Windows.Forms.Label lblMin;
+        private System.Windows.Forms.Label lblRadam;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Label label1;
     }
 }
