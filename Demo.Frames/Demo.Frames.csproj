@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Frame.cs" />
     <Compile Include="FrameForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +69,18 @@
     <Compile Include="GrabFrames.cs" />
     <Compile Include="ImageExtractor.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiForm.Designer.cs">
+      <DependentUpon>MultiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlayPanel.Designer.cs">
+      <DependentUpon>PlayPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="ProgressPanel.cs">
       <SubType>UserControl</SubType>
@@ -100,6 +113,13 @@
     </Compile>
     <EmbeddedResource Include="FrameForm.resx">
       <DependentUpon>FrameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiForm.resx">
+      <DependentUpon>MultiForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayPanel.resx">
+      <DependentUpon>PlayPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressPanel.resx">
       <DependentUpon>ProgressPanel.cs</DependentUpon>
@@ -146,9 +166,6 @@
     <Content Include="graphedt.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\readme.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Lib\DirectShowLib-2005.dll" />
     <Content Include="Lib\Interop.DexterLib.dll" />
   </ItemGroup>
@@ -157,6 +174,9 @@
       <Project>{abb32a29-af50-47fa-b243-5fd75a5aba54}</Project>
       <Name>AviFile</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

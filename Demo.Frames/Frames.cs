@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Demo.Frames
 {
+    [Serializable]
     public class Frames
     {
         private double _time;

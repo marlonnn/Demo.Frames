@@ -37,6 +37,7 @@ namespace Demo.Frames
             InitializeComponent();
             _frames = new List<Frame>();
             _currentNumber = 0;
+            this.picFrame.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void hscrFps_Scroll(object sender, ScrollEventArgs e)
@@ -117,43 +118,6 @@ namespace Demo.Frames
                 frames.Add(frame);
             }
             return frames;
-        }
-    }
-
-    public class Frame
-    {
-        private string _fileFullName;
-
-        private string _folder;
-
-        public string FileFullName
-        {
-            get
-            {
-                return this._fileFullName;
-            }
-            set
-            {
-                this._fileFullName = value;
-            }
-        }
-
-        public string Folder
-        {
-            get
-            {
-                return this._folder;
-            }
-            set
-            {
-                this._folder = value;
-            }
-        }
-
-        public Frame(string fileFullName, string folder)
-        {
-            this._fileFullName = fileFullName;
-            this._folder = folder;
         }
     }
 }

@@ -52,7 +52,7 @@
             this.picFrame.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picFrame.Location = new System.Drawing.Point(12, 106);
             this.picFrame.Name = "picFrame";
-            this.picFrame.Size = new System.Drawing.Size(500, 600);
+            this.picFrame.Size = new System.Drawing.Size(360, 360);
             this.picFrame.TabIndex = 2;
             this.picFrame.TabStop = false;
             // 
@@ -138,18 +138,18 @@
             // trackBar
             // 
             this.trackBar.LargeChange = 2;
-            this.trackBar.Location = new System.Drawing.Point(567, 131);
+            this.trackBar.Location = new System.Drawing.Point(429, 131);
             this.trackBar.Maximum = 6;
             this.trackBar.Name = "trackBar";
             this.trackBar.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBar.Size = new System.Drawing.Size(45, 444);
+            this.trackBar.Size = new System.Drawing.Size(45, 324);
             this.trackBar.TabIndex = 4;
             this.trackBar.ValueChanged += new System.EventHandler(this.TraceBar_ValueChanged);
             // 
             // lblRadam
             // 
             this.lblRadam.AutoSize = true;
-            this.lblRadam.Location = new System.Drawing.Point(570, 106);
+            this.lblRadam.Location = new System.Drawing.Point(432, 106);
             this.lblRadam.Name = "lblRadam";
             this.lblRadam.Size = new System.Drawing.Size(13, 13);
             this.lblRadam.TabIndex = 5;
@@ -162,7 +162,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(518, 106);
+            this.label1.Location = new System.Drawing.Point(380, 106);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 6;
@@ -172,7 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 710);
+            this.ClientSize = new System.Drawing.Size(518, 477);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblRadam);
             this.Controls.Add(this.trackBar);
