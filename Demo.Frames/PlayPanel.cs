@@ -19,6 +19,11 @@ namespace Demo.Frames
         public delegate void TraceBarChangedDelegate(PlayPanel playPanel,int value);
 
         public TraceBarChangedDelegate TraceBarChangedHandler;
+
+        public Timer PlayTimer
+        {
+            get { return this.playTimer; }
+        }
         public List<Frame> Frames
         {
             get

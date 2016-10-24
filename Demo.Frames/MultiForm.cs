@@ -50,7 +50,7 @@ namespace Demo.Frames
             {
                 ofd.Description = "请选择将要播放帧图的文件夹";
                 ofd.RootFolder = Environment.SpecialFolder.Desktop;
-                ofd.SelectedPath = System.Environment.CurrentDirectory;
+                ofd.SelectedPath = System.Environment.CurrentDirectory + "\\Images";
 
                 _frames.Clear();
                 if (ofd.ShowDialog() == DialogResult.OK)
@@ -101,6 +101,25 @@ namespace Demo.Frames
                 }
             }
         }
+
+        private void hscrFps_Scroll(object sender, ScrollEventArgs e)
+        {
+            //timer.Interval = 1000 / hScrollBar.Value;
+            SetInterval(1000 / hScrollBar.Value);
+            lblFps.Text = hScrollBar.Value.ToString();
+        }
+
+        private void SetInterval(int value)
+        {
+            foreach (var playPanel in this._playPanels)
+            {
+                if (playPanel != null)
+                {
+                    playPanel.PlayTimer.Interval = value;
+                }
+            }
+        }
+
 
         private List<Frame> GetFrames(string index)
         {
