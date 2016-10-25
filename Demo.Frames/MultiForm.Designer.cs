@@ -57,7 +57,6 @@ namespace Demo.Frames
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lblFps);
             this.groupBox1.Controls.Add(this.btnStop);
             this.groupBox1.Controls.Add(this.btnPlay);
             this.groupBox1.Controls.Add(this.btnOpen);
@@ -71,7 +70,7 @@ namespace Demo.Frames
             // lblFps
             // 
             this.lblFps.AutoSize = true;
-            this.lblFps.Location = new System.Drawing.Point(53, 224);
+            this.lblFps.Location = new System.Drawing.Point(34, 13);
             this.lblFps.Name = "lblFps";
             this.lblFps.Size = new System.Drawing.Size(13, 13);
             this.lblFps.TabIndex = 4;
@@ -79,7 +78,7 @@ namespace Demo.Frames
             // 
             // btnStop
             // 
-            this.btnStop.Location = new System.Drawing.Point(23, 131);
+            this.btnStop.Location = new System.Drawing.Point(22, 249);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(75, 23);
             this.btnStop.TabIndex = 2;
@@ -89,7 +88,7 @@ namespace Demo.Frames
             // 
             // btnPlay
             // 
-            this.btnPlay.Location = new System.Drawing.Point(23, 73);
+            this.btnPlay.Location = new System.Drawing.Point(22, 191);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(75, 23);
             this.btnPlay.TabIndex = 1;
@@ -99,7 +98,7 @@ namespace Demo.Frames
             // 
             // btnOpen
             // 
-            this.btnOpen.Location = new System.Drawing.Point(23, 19);
+            this.btnOpen.Location = new System.Drawing.Point(22, 137);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(75, 23);
             this.btnOpen.TabIndex = 0;
@@ -109,9 +108,10 @@ namespace Demo.Frames
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblFps);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.hScrollBar);
-            this.groupBox2.Location = new System.Drawing.Point(5, 211);
+            this.groupBox2.Location = new System.Drawing.Point(6, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(121, 52);
             this.groupBox2.TabIndex = 5;
@@ -268,7 +268,6 @@ namespace Demo.Frames
             this.Name = "MultiForm";
             this.Text = "MultiForm";
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
