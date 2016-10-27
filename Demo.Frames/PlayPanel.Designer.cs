@@ -1,4 +1,6 @@
-﻿namespace Demo.Frames
+﻿using System.Windows.Forms;
+
+namespace Demo.Frames
 {
     partial class PlayPanel
     {
@@ -43,6 +45,7 @@
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(180, 180);
             this.pictureBox.TabIndex = 0;
+            this.pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabStop = false;
             // 
             // trackBar
