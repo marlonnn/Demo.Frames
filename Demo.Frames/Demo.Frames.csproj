@@ -135,6 +135,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FramePlayer.resx">
       <DependentUpon>FramePlayer.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="PlayPanel.resx">
       <DependentUpon>PlayPanel.cs</DependentUpon>
@@ -187,6 +188,7 @@
     <Content Include="Lib\DirectShowLib-2005.dll" />
     <Content Include="Lib\Interop.DexterLib.dll" />
     <Content Include="Lib\Summer.UI.dll" />
+    <Content Include="Resources\background.png" />
     <Content Include="Resources\forward.png" />
     <None Include="Resources\movie_file.png" />
     <Content Include="Resources\next.png" />
