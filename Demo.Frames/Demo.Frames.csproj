@@ -86,11 +86,29 @@
     <Compile Include="ImageExtractor.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MultiForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiForm3.Designer.cs">
+      <DependentUpon>MultiForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiForm2.Designer.cs">
+      <DependentUpon>MultiForm2.cs</DependentUpon>
+    </Compile>
     <Compile Include="MultiForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MultiForm.Designer.cs">
       <DependentUpon>MultiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PictureBoxPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PictureBoxPanel.Designer.cs">
+      <DependentUpon>PictureBoxPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="PlayPanel.cs">
       <SubType>UserControl</SubType>
@@ -136,6 +154,15 @@
     <EmbeddedResource Include="FramePlayer.resx">
       <DependentUpon>FramePlayer.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiForm3.resx">
+      <DependentUpon>MultiForm3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiForm2.resx">
+      <DependentUpon>MultiForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PictureBoxPanel.resx">
+      <DependentUpon>PictureBoxPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlayPanel.resx">
       <DependentUpon>PlayPanel.cs</DependentUpon>
