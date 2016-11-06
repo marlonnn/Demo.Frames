@@ -36,9 +36,9 @@
             // pictureBox
             // 
             this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox.Location = new System.Drawing.Point(3, 3);
+            //this.pictureBox.Location = new System.Drawing.Point(3, 3);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(180, 166);
+            //this.pictureBox.Size = new System.Drawing.Size(180, 166);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 1;
             this.pictureBox.TabStop = false;

@@ -53,7 +53,16 @@ namespace Demo.Frames
             InitializeComponent();
             _frames = new List<Frame>();
             _currentNumber = 0;
+            this.pictureBox.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox.Size = new System.Drawing.Size(this.Width, this.Height);
             this.pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
+
+        protected override void OnResize(EventArgs e)
+        {
+            this.Width = this.Height;
+            this.pictureBox.Width = this.Width;
+            this.pictureBox.Height = this.Width;
         }
 
         private void PlayTimer_Tick(object sender, EventArgs e)

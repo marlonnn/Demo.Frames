@@ -32,6 +32,7 @@ namespace Demo.Frames
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MultiForm3));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnPlay = new System.Windows.Forms.Button();
@@ -40,11 +41,13 @@ namespace Demo.Frames
             this.lblFps = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.hScrollBar = new System.Windows.Forms.HScrollBar();
-            this.playPanel4 = new Demo.Frames.PictureBoxPanel();
-            this.playPanel3 = new Demo.Frames.PictureBoxPanel();
-            this.playPanel2 = new Demo.Frames.PictureBoxPanel();
-            this.playPanel1 = new Demo.Frames.PictureBoxPanel();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.pictureBoxPanel1 = new Demo.Frames.PictureBoxPanel();
+            this.pictureBoxPanel2 = new Demo.Frames.PictureBoxPanel();
+            this.pictureBoxPanel3 = new Demo.Frames.PictureBoxPanel();
+            this.pictureBoxPanel4 = new Demo.Frames.PictureBoxPanel();
+            this.pictureBoxPanel5 = new Demo.Frames.PictureBoxPanel();
+            this.pictureBoxPanel6 = new Demo.Frames.PictureBoxPanel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -132,56 +135,72 @@ namespace Demo.Frames
             this.hScrollBar.Value = 5;
             this.hScrollBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hscrFps_Scroll);
             // 
-            // playPanel4
+            // pictureBoxPanel1
             // 
-            this.playPanel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.playPanel4.Frames = null;
-            this.playPanel4.Location = new System.Drawing.Point(142, 236);
-            this.playPanel4.Name = "playPanel4";
-            this.playPanel4.PlayTimer = null;
-            this.playPanel4.Size = new System.Drawing.Size(189, 175);
-            this.playPanel4.TabIndex = 3;
+            this.pictureBoxPanel1.Frames = ((System.Collections.Generic.List<Demo.Frames.Frame>)(resources.GetObject("pictureBoxPanel1.Frames")));
+            this.pictureBoxPanel1.Location = new System.Drawing.Point(156, 6);
+            this.pictureBoxPanel1.Name = "pictureBoxPanel1";
+            this.pictureBoxPanel1.PlayTimer = null;
+            this.pictureBoxPanel1.Size = new System.Drawing.Size(295, 295);
+            this.pictureBoxPanel1.TabIndex = 13;
             // 
-            // playPanel3
+            // pictureBoxPanel2
             // 
-            this.playPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.playPanel3.Frames = null;
-            this.playPanel3.Location = new System.Drawing.Point(622, 11);
-            this.playPanel3.Name = "playPanel3";
-            this.playPanel3.PlayTimer = null;
-            this.playPanel3.Size = new System.Drawing.Size(189, 175);
-            this.playPanel3.TabIndex = 2;
+            this.pictureBoxPanel2.Frames = ((System.Collections.Generic.List<Demo.Frames.Frame>)(resources.GetObject("pictureBoxPanel2.Frames")));
+            this.pictureBoxPanel2.Location = new System.Drawing.Point(457, 6);
+            this.pictureBoxPanel2.Name = "pictureBoxPanel2";
+            this.pictureBoxPanel2.PlayTimer = null;
+            this.pictureBoxPanel2.Size = new System.Drawing.Size(295, 295);
+            this.pictureBoxPanel2.TabIndex = 14;
             // 
-            // playPanel2
+            // pictureBoxPanel3
             // 
-            this.playPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.playPanel2.Frames = null;
-            this.playPanel2.Location = new System.Drawing.Point(382, 11);
-            this.playPanel2.Name = "playPanel2";
-            this.playPanel2.PlayTimer = null;
-            this.playPanel2.Size = new System.Drawing.Size(189, 175);
-            this.playPanel2.TabIndex = 1;
+            this.pictureBoxPanel3.Frames = ((System.Collections.Generic.List<Demo.Frames.Frame>)(resources.GetObject("pictureBoxPanel3.Frames")));
+            this.pictureBoxPanel3.Location = new System.Drawing.Point(758, 6);
+            this.pictureBoxPanel3.Name = "pictureBoxPanel3";
+            this.pictureBoxPanel3.PlayTimer = null;
+            this.pictureBoxPanel3.Size = new System.Drawing.Size(295, 295);
+            this.pictureBoxPanel3.TabIndex = 15;
             // 
-            // playPanel1
+            // pictureBoxPanel4
             // 
-            this.playPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.playPanel1.Frames = null;
-            this.playPanel1.Location = new System.Drawing.Point(142, 11);
-            this.playPanel1.Name = "playPanel1";
-            this.playPanel1.PlayTimer = null;
-            this.playPanel1.Size = new System.Drawing.Size(189, 175);
-            this.playPanel1.TabIndex = 0;
+            this.pictureBoxPanel4.Frames = ((System.Collections.Generic.List<Demo.Frames.Frame>)(resources.GetObject("pictureBoxPanel4.Frames")));
+            this.pictureBoxPanel4.Location = new System.Drawing.Point(156, 307);
+            this.pictureBoxPanel4.Name = "pictureBoxPanel4";
+            this.pictureBoxPanel4.PlayTimer = null;
+            this.pictureBoxPanel4.Size = new System.Drawing.Size(295, 295);
+            this.pictureBoxPanel4.TabIndex = 16;
+            // 
+            // pictureBoxPanel5
+            // 
+            this.pictureBoxPanel5.Frames = ((System.Collections.Generic.List<Demo.Frames.Frame>)(resources.GetObject("pictureBoxPanel5.Frames")));
+            this.pictureBoxPanel5.Location = new System.Drawing.Point(457, 307);
+            this.pictureBoxPanel5.Name = "pictureBoxPanel5";
+            this.pictureBoxPanel5.PlayTimer = null;
+            this.pictureBoxPanel5.Size = new System.Drawing.Size(295, 295);
+            this.pictureBoxPanel5.TabIndex = 17;
+            // 
+            // pictureBoxPanel6
+            // 
+            this.pictureBoxPanel6.Frames = ((System.Collections.Generic.List<Demo.Frames.Frame>)(resources.GetObject("pictureBoxPanel6.Frames")));
+            this.pictureBoxPanel6.Location = new System.Drawing.Point(758, 307);
+            this.pictureBoxPanel6.Name = "pictureBoxPanel6";
+            this.pictureBoxPanel6.PlayTimer = null;
+            this.pictureBoxPanel6.Size = new System.Drawing.Size(295, 295);
+            this.pictureBoxPanel6.TabIndex = 18;
             // 
             // MultiForm3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1101, 604);
+            this.ClientSize = new System.Drawing.Size(1150, 626);
+            this.Controls.Add(this.pictureBoxPanel6);
+            this.Controls.Add(this.pictureBoxPanel5);
+            this.Controls.Add(this.pictureBoxPanel4);
+            this.Controls.Add(this.pictureBoxPanel3);
+            this.Controls.Add(this.pictureBoxPanel2);
+            this.Controls.Add(this.pictureBoxPanel1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.playPanel4);
-            this.Controls.Add(this.playPanel3);
-            this.Controls.Add(this.playPanel2);
-            this.Controls.Add(this.playPanel1);
             this.MinimizeBox = false;
             this.Name = "MultiForm3";
             this.Text = "MultiForm";
@@ -192,11 +211,6 @@ namespace Demo.Frames
 
         }
         #endregion
-
-        private PictureBoxPanel playPanel1;
-        private PictureBoxPanel playPanel2;
-        private PictureBoxPanel playPanel3;
-        private PictureBoxPanel playPanel4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Button btnPlay;
@@ -206,5 +220,11 @@ namespace Demo.Frames
         private System.Windows.Forms.HScrollBar hScrollBar;
         private System.Windows.Forms.Label label1;
         private Timer timer;
+        private PictureBoxPanel pictureBoxPanel1;
+        private PictureBoxPanel pictureBoxPanel2;
+        private PictureBoxPanel pictureBoxPanel3;
+        private PictureBoxPanel pictureBoxPanel4;
+        private PictureBoxPanel pictureBoxPanel5;
+        private PictureBoxPanel pictureBoxPanel6;
     }
 }
