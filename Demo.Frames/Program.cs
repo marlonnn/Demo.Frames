@@ -18,7 +18,7 @@ namespace Demo.Frames
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new MultiForm5());
+                Application.Run(new MultiForm6());
             }
             catch (Exception ee)
             {
