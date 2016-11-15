@@ -70,6 +70,12 @@
     <Compile Include="ControlPanel.Designer.cs">
       <DependentUpon>ControlPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frame.cs" />
     <Compile Include="FrameForm.cs">
       <SubType>Form</SubType>
@@ -85,6 +91,18 @@
     </Compile>
     <Compile Include="Frames.cs" />
     <Compile Include="GrabFrames.cs" />
+    <Compile Include="MultiForm7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiForm7.Designer.cs">
+      <DependentUpon>MultiForm7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RichImageBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RichImageBox.Designer.cs">
+      <DependentUpon>RichImageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="ImageExtractor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +192,9 @@
     <EmbeddedResource Include="ControlPanel.resx">
       <DependentUpon>ControlPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrameForm.resx">
       <DependentUpon>FrameForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MultiForm2.resx">
       <DependentUpon>MultiForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiForm7.resx">
+      <DependentUpon>MultiForm7.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MultiForm6.resx">
       <DependentUpon>MultiForm6.cs</DependentUpon>
