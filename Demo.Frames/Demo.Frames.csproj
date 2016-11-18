@@ -91,6 +91,7 @@
     </Compile>
     <Compile Include="Frames.cs" />
     <Compile Include="GrabFrames.cs" />
+    <Compile Include="ImageUtilities.cs" />
     <Compile Include="MultiForm7.cs">
       <SubType>Form</SubType>
     </Compile>

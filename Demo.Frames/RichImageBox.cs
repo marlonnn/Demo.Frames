@@ -14,6 +14,20 @@ namespace Demo.Frames
 {
     public partial class RichImageBox : UserControl
     {
+        private Object thisLock = new Object();
+        private Bitmap _bitmap;
+        public Bitmap Bitmap
+        {
+            get { return this._bitmap; }
+            set
+            {
+                lock (thisLock)
+                {
+                    this._bitmap = value;
+                    this.Invalidate();
+                }
+            }
+        }
         public enum AnchorPosition
         {
             Top,
@@ -41,16 +55,6 @@ namespace Demo.Frames
                 }
             }
         }
-        private Bitmap _bitMap;
-
-        public Bitmap Bitmap
-        {
-            set
-            {
-                this._bitMap = value;
-                this.Invalidate();
-            }
-        }
 
         public RichImageBox()
         {
@@ -59,28 +63,16 @@ namespace Demo.Frames
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            if (!string.IsNullOrEmpty(ImagePath))
+            if (_bitmap != null)
             {
                 Graphics graphics = e.Graphics;
                 graphics.SmoothingMode = SmoothingMode.AntiAlias;
                 graphics.PixelOffsetMode = PixelOffsetMode.HighSpeed;
-                graphics.CompositingQuality = CompositingQuality.GammaCorrected;
-                using (Bitmap bitmap = new Bitmap(ImagePath))
-                {
-                    graphics.DrawImage((Bitmap)Crop(bitmap, this.Width, this.Height, AnchorPosition.Center), 0, 0);
-                }
+                graphics.CompositingQuality = CompositingQuality.HighSpeed;
+                //loadImage(ImagePath, this, graphics);
+                graphics.DrawImage(_bitmap, 0, 0);
+
             }
-            //if (_bitMap != null)
-            //{
-            //    Graphics graphics = e.Graphics;
-            //    graphics.SmoothingMode = SmoothingMode.AntiAlias;
-            //    graphics.PixelOffsetMode = PixelOffsetMode.HighSpeed;
-            //    graphics.CompositingQuality = CompositingQuality.GammaCorrected;
-            //    using (_bitMap = (Bitmap)Crop(_bitMap, this.Width, this.Height, AnchorPosition.Center))
-            //    {
-            //        graphics.DrawImage(_bitMap, 0, 0);
-            //    }
-            //}
         }
 
         public Image ScaleByPercent(Image imgPhoto, int Percent)
@@ -101,7 +93,7 @@ namespace Demo.Frames
             bmPhoto.SetResolution(imgPhoto.HorizontalResolution, imgPhoto.VerticalResolution);
 
             Graphics grPhoto = Graphics.FromImage(bmPhoto);
-            grPhoto.InterpolationMode = InterpolationMode.HighQualityBicubic;
+            grPhoto.InterpolationMode = InterpolationMode.Low;
 
             grPhoto.DrawImage(imgPhoto,
                 new Rectangle(destX, destY, destWidth, destHeight),
@@ -149,7 +141,7 @@ namespace Demo.Frames
 
             Graphics grPhoto = Graphics.FromImage(bmPhoto);
             grPhoto.Clear(Color.Red);
-            grPhoto.InterpolationMode = InterpolationMode.HighQualityBicubic;
+            grPhoto.InterpolationMode = InterpolationMode.Low;
 
             grPhoto.DrawImage(imgPhoto,
                 new Rectangle(destX, destY, destWidth, destHeight),
