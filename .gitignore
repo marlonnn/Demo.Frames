@@ -41,3 +41,9 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+/AviFile/bin/Debug
+/AviFile/obj/Debug
+/Demo.Frames/bin/Debug/Frames
+/Demo.Frames/obj/Debug
+/Cyotek.Windows.Forms.ImageBox.Design/obj/Debug
+/Cyotek.Windows.Forms.ImageBox
